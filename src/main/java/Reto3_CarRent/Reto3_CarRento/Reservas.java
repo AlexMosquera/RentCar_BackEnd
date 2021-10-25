@@ -40,6 +40,8 @@ public class Reservas {
     @JoinColumn(name = "idClient")
     @JsonIgnoreProperties({"reservations","messages"})
     private Clientes client;
+    
+    private Integer score;
 
     public Integer getIdReservation() {
         return idReservation;
@@ -89,5 +91,12 @@ public class Reservas {
         this.client = client;
     }
 
-    
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
+    }
+   
 }
